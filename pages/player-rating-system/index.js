@@ -406,8 +406,8 @@ export default function PlayerRatingSystem() {
 
             <div className="container-fluid player-system-container">
                 <BreadCrumbSearchBox
-                    current={"Player Finding System"}
-                    path={"player-finding-system"}
+                    current={"Player Rating System"}
+                    path={"player-rating-system"}
                     search={true}
                 />
 
