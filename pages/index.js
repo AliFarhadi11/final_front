@@ -24,7 +24,7 @@ import club_icon from "../public/images/club_icon.svg";
 import agent_icon from "../public/images/agent_icon.svg";
 import fans_icon from "../public/images/fans_icon.svg";
 import more_icon from "../public/images/more_icon.svg";
-import login_icon from "../public/images/dark_login_icon.svg";
+import login_icon from "../public/images/login_icon.svg";
 import threed_info_system from "../public/images/3d_info_system.png";
 import dark_login_icon from "../public/images/dark_login_icon.svg";
 import threed_finding_system from "../public/images/3d_finding_system.png";
@@ -127,7 +127,7 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className="player-systems px-2">
+                    <div className="player-systems">
                         <div className="player-system-box">
                             <h5>PlayersCube</h5>
                             <Image
@@ -141,7 +141,7 @@ export default function Home() {
 
                             <Link href="player-information-system" className="box-cta">
                                 <span>Get Started</span>
-                                <Image src={dark_login_icon} alt="get_started" width="auto" height="auto" />
+                                <Image src={login_icon} alt="get_started" width="auto" height="auto" />
                             </Link>
                         </div>
                         <div className="player-system-box">
@@ -157,7 +157,7 @@ export default function Home() {
 
                             <Link href="player-rating-system" className="box-cta">
                                 <span>Get Started</span>
-                                <Image src={dark_login_icon} alt="get_started" width="auto" height="auto" />
+                                <Image src={login_icon} alt="get_started" width="auto" height="auto" />
                             </Link>
                         </div>
                         <div className="player-system-box">
@@ -173,7 +173,7 @@ export default function Home() {
 
                             <Link href="player-finding-system" className="box-cta">
                                 <span>Get Started</span>
-                                <Image src={dark_login_icon} alt="get_started" width="auto" height="auto" />
+                                <Image src={login_icon} alt="get_started" width="auto" height="auto" />
                             </Link>
                         </div>
                     </div>

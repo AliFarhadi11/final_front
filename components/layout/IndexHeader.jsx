@@ -82,9 +82,9 @@ export default function IndexHeader() {
                             height="18"
                             viewBox="0 0 26 18"
                             fill="none">
-                            <path d="M1 1H25" stroke="#1252C6" stroke-width="2" stroke-linecap="round" />
-                            <path d="M1 9H25" stroke="#1252C6" stroke-width="2" stroke-linecap="round" />
-                            <path d="M1 17H25" stroke="#1252C6" stroke-width="2" stroke-linecap="round" />
+                            <path d="M1 1H25" stroke="#1252C6" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M1 9H25" stroke="#1252C6" strokeWidth="2" strokeLinecap="round" />
+                            <path d="M1 17H25" stroke="#1252C6" strokeWidth="2" strokeLinecap="round" />
                         </svg>
 
                         <div className={isToggled ? "menu active" : "menu"}>

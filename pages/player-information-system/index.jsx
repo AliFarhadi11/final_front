@@ -32,6 +32,8 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { countries } from "../../countries";
+import { Tooltip as Materialtooltip } from "@mui/material";
+import alert_icon from "../../public/images/alert_icon.svg";
 
 function PlayerInformationSystem() {
     const dispatch = useDispatch();
@@ -327,7 +329,12 @@ function PlayerInformationSystem() {
                 <meta property="og:url" content="https://playerscube.com/" />
             </Head>
 
-            <div className="container-fluid player-system-container">
+            <div
+                className={
+                    info_data.length > 0
+                        ? "container-fluid player-system-container found"
+                        : "container-fluid player-system-container"
+                }>
                 <BreadCrumbSearchBox
                     current={"Player Information System"}
                     path={"player-systemrmation-system"}
@@ -767,7 +774,16 @@ function PlayerInformationSystem() {
 
                         {/* Filter Option */}
                         <div className="filter-option-wrapper mt-4">
-                            <h4 className="text-uppercase font-gilroy-semibold ps-3">International play</h4>
+                            <div className="d-flex justify-content-between align-items-center">
+                                <h4 className="text-uppercase font-gilroy-semibold ps-3">
+                                    International play
+                                </h4>
+                                <Materialtooltip title="Tip, Tip" arrow className="tool-tip">
+                                    <Button>
+                                        <Image src={alert_icon} alt="tip" width="auto" height="auto" />
+                                    </Button>
+                                </Materialtooltip>
+                            </div>
 
                             <div className="filter-box py-4 px-4">
                                 <div className="mb-3 py-2">
@@ -844,7 +860,13 @@ function PlayerInformationSystem() {
                         {/* Filter Option */}
                         <div className="filter-option-wrapper mt-4">
                             <div className="filter-box py-3 px-4">
-                                <h4 className="text-uppercase font-gilroy-semibold">Market Value</h4>
+                                <h4 className="text-uppercase font-gilroy-semibold">market value</h4>
+                                <Materialtooltip title="Tip, Tip" arrow className="tool-tip box">
+                                    <Button>
+                                        <Image src={alert_icon} alt="tip" width="auto" height="auto" />
+                                    </Button>
+                                </Materialtooltip>
+
                                 <RangeSlider
                                     min={0}
                                     max={200000}
@@ -859,7 +881,12 @@ function PlayerInformationSystem() {
                         {/* Filter Option */}
                         <div className="filter-option-wrapper mt-4">
                             <div className="filter-box py-3 px-4">
-                                <h4 className="text-uppercase font-gilroy-semibold">Contract Expire</h4>
+                                <h4 className="text-uppercase font-gilroy-semibold">contract expire</h4>
+                                <Materialtooltip title="Tip, Tip" arrow className="tool-tip box">
+                                    <Button>
+                                        <Image src={alert_icon} alt="tip" width="auto" height="auto" />
+                                    </Button>
+                                </Materialtooltip>
                                 <div className="d-flex gap-3 align-items-center">
                                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                                         <DatePicker

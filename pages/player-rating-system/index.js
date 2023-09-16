@@ -404,7 +404,12 @@ export default function PlayerRatingSystem() {
                 <title>Player Rating System</title>
             </Head>
 
-            <div className="container-fluid player-system-container">
+            <div
+                className={
+                    player_rating.length > 0
+                        ? "container-fluid player-system-container found"
+                        : "container-fluid player-system-container"
+                }>
                 <BreadCrumbSearchBox
                     current={"Player Rating System"}
                     path={"player-rating-system"}
@@ -799,7 +804,7 @@ export default function PlayerRatingSystem() {
                                             <li
                                                 key={item.id}
                                                 onClick={() => {
-                                                    dispatch(addRatingInputs({ season: item}));
+                                                    dispatch(addRatingInputs({ season: item }));
                                                     setIsSeasonExpanded(false);
                                                 }}
                                                 className={

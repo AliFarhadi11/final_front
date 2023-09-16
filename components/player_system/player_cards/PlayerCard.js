@@ -68,7 +68,7 @@ export default function PlayerCard({ index, player, rating, season }) {
                     <Link
                         target="_blank"
                         rel="noreferrer"
-                        href={`player-report/${player?.Player.id}/${season}/${player?.Player}`}>
+                        href={`player-report/${player?.player.id}/${season}/${player?.Player}`}>
                         View Profile
                     </Link>
                 </Button>
@@ -77,68 +77,3 @@ export default function PlayerCard({ index, player, rating, season }) {
     );
 }
 
-// const thisisit = (
-//     <div className="player-card">
-//         {/* image */}
-//         <Image
-//             src={
-//                 isEmpty(player)
-//                     ? "/images/plyicon2.png"
-//                     : `https://playerscubestore.storage.iran.liara.space/players/${player.Player}.jpg`
-//             }
-//             loading="lazy"
-//             width="125"
-//             height="125"
-//             alt={player.Player}
-//         />
-//         <div className="d-fle align-items-center gap-3 player-card_rating">
-//             <div className="d-flex align-items-center justify-content-between p-2">
-//                 <span>Rank</span>
-//                 <span>{player?.ranking}</span>
-//             </div>
-//             <div className="d-flex align-items-center justify-content-between p-2">
-//                 <span>Rate</span>
-//                 <span>
-//                     {Number(player?.rating).toFixed(2)}
-//                     <StarIcon
-//                         fontSize="small"
-//                         color="ranking"
-//                         sx={{ mt: -0.5, display: { xs: "none", sm: "inline-block" } }}
-//                     />
-//                 </span>
-//             </div>
-//             <h5>{player?.player}</h5>
-//             <div className="d-flex align-items-center gap-2">
-//                 <Tooltip title={player?.Nation}>
-//                     <Image
-//                         width="25"
-//                         height="25"
-//                         alt={player?.Nation}
-//                         src={`https://playerscubestore.storage.iran.liara.space/nations/${player?.Nation}.png`}
-//                     />
-//                 </Tooltip>
-//                 <Tooltip title={player?.club}>
-//                     <Image
-//                         width="25"
-//                         height="25"
-//                         alt={player?.club}
-//                         src={`https://playerscubestore.storage.iran.liara.space/nations/${player?.club}.png`}
-//                     />
-//                 </Tooltip>
-//             </div>
-//             <h5>{player?.club}</h5>
-//             <div className="d-flex gap-3 align-items-center player-card_posage">
-//                 <span>Age: 37</span>
-//                 <span>Forward</span>
-//             </div>
-//             <Button className="view-profile">
-//                 <Link
-//                     target="_blank"
-//                     rel="noreferrer"
-//                     href={`player-report/${player.player.id}/${season}/${player.Player}`}>
-//                     View Profile
-//                 </Link>
-//             </Button>
-//         </div>
-//     </div>
-// );

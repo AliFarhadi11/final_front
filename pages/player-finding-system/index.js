@@ -51,6 +51,8 @@ import arrow_down from "../../public/images/arrow_down.svg";
 import { useRef } from "react";
 import RangeSlider from "../../components/layout/RangeSlider";
 import { countries } from "../../countries.js";
+import { Tooltip as Materialtooltip } from "@mui/material";
+import alert_icon from "../../public/images/alert_icon.svg";
 
 export default function PlayerFindingSystem() {
     const dispatch = useDispatch();
@@ -478,7 +480,12 @@ export default function PlayerFindingSystem() {
                 <meta property="og:url" content="https://playerscube.com/learn-more" />
             </Head>
 
-            <div className="container-fluid player-system-container">
+            <div
+                className={
+                    player_finding.length > 0
+                        ? "container-fluid player-system-container found"
+                        : "container-fluid player-system-container"
+                }>
                 <BreadCrumbSearchBox
                     current={"Player Finding System"}
                     path={"player-finding-system"}
@@ -1013,9 +1020,16 @@ export default function PlayerFindingSystem() {
                         </div>
                         {/* Filter Option */}
                         <div className="filter-option-wrapper mt-4">
-                            <h4 className="text-uppercase font-gilroy-semibold ps-3">
-                                Player Performance Indexes
-                            </h4>
+                            <div className="d-flex justify-content-between align-items-center mb-2">
+                                <h4 className="text-uppercase font-gilroy-semibold ps-3">
+                                    player performance indexes
+                                </h4>
+                                <Materialtooltip title="Tip, Tip" arrow className="tool-tip">
+                                    <Button>
+                                        <Image src={alert_icon} alt="tip" width="auto" height="auto" />
+                                    </Button>
+                                </Materialtooltip>
+                            </div>
 
                             <div className="indexes-btn">
                                 <Button onClick={() => setShowIndex(true)}>
@@ -1028,9 +1042,10 @@ export default function PlayerFindingSystem() {
                             Apply Filters
                         </Button>
                     </aside>
+
                     <main className="player-system-result container-fluid col-lg-9 col-12">
                         {player_finding.length <= 0 && (
-                            <div className="result-head-wrapper py-2 px-4 text-center font-gilroy-medium mt-3 mx-4">
+                            <div className="result-head-wrapper py-1 px-2 px-lg-4 py-lg-2 text-center font-gilroy-medium mt-3 mx-4">
                                 <FormattedMessage id="PRS.per" /> <FormattedMessage id="PRS.your" />{" "}
                                 <FormattedMessage id="PRS.them" />
                             </div>

@@ -1,8 +1,7 @@
 import {
     Chart as ChartJs,
-    LineElement,
     PointElement,
-    BarElement,
+    LineElement,
     Tooltip,
     Legend,
     LinearScale,
@@ -10,9 +9,9 @@ import {
     CategoryScale,
 } from "chart.js";
 
-import { Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 
-ChartJs.register(LineElement, PointElement, Tooltip, Filler, CategoryScale, LinearScale, BarElement);
+ChartJs.register(LineElement, PointElement, Tooltip, Filler, CategoryScale, LinearScale);
 function createData(data) {
 
 return  {
@@ -23,34 +22,28 @@ return  {
             label: "",
             data: data.data,
             fill: true,
-            backgroundColor: [
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-                "#273DF3", "#F32757", "#F39027","#1FBB96", "#F327F0", "#F39027",
-        ],
-            borderRadius: 5,
+            backgroundColor: "rgba(22,74,163, 0.3)",
+            borderColor: "rgb(22,74,163)",
         },
     ],
 } 
 }
 const options = {
-    scales: {
-        x: {
-            grid: {
-                display: false,
-            },
-        },
-        y: {
-            grid: {
-                display: false,
-            },
-        },
-    },
+    // scales: {
+    //     x: {
+    //         grid: {
+    //             display: false,
+    //         },
+    //     },
+    //     y: {
+    //         grid: {
+    //             display: false,
+    //         },
+    //     },
+    // },
 
     responsive: true,
+    tension : 0.3,
 
     plugins: {
         tooltip: {
@@ -67,7 +60,7 @@ const options = {
     },
 };
 const AVGRatingChart = ({ratingsData}) => {
-    return <Bar data={createData(ratingsData)} options={options}></Bar>;
+    return <Line data={createData(ratingsData)} options={options}></Line>;
 };
 
 export default AVGRatingChart;

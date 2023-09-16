@@ -215,7 +215,7 @@ function PlayerReport() {
 
             {(!isEmpty(player_report) && player_report.details.length > 0) ?
 
-                <main className="player-report-container container-fluid">
+                <main className="player-system-container container-fluid">
                     <BreadCrumbSearchBox current={"Player Report"} path={"player-report"} />
 
                     <div className="report-section-links my-4 d-md-flex d-none">
@@ -265,11 +265,7 @@ function PlayerReport() {
                                             <img
                                                 src={`https://playerscubestore.storage.iran.liara.space/players/${detail.Player}.jpg`}
                                                 loading="lazy"
-                                                style={{
-                                                    width: '100%',
-                                                    height: '10vw',
-                                                    borderRadius: '10px',
-                                                }}
+                                                className="player-info-img"
                                                 alt={detail.Player} />
 
                                             <div
