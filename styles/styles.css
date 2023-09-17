@@ -2600,7 +2600,7 @@ ul {
         width: 150px;
     }
 
-    .header-search-form {
+    .header-search-form:not(.bc) {
         max-width: 160px;
     }
 }
