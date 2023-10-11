@@ -68,6 +68,9 @@ ul {
     padding: 1rem 5rem;
 }
 
+.user-logedin {
+    z-index: 5;
+}
 .idx-header {
     padding: 1rem 5rem;
     background: transparent;

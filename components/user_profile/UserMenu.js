@@ -89,7 +89,7 @@ export default function UserMenu({ user }) {
         <Stack direction="row" spacing={2} sx={{mx:2}}   >
 
 
-            {!isEmpty(user) && <div>
+            {!isEmpty(user) && <div className='user-logedin'>
                 <Grid item
                     container
                     direction="row"
